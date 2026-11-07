@@ -1,0 +1,32 @@
+[package]
+name = "darkmpc-mpc"
+description = "Semi-honest three-party replicated secret sharing over Z_2^64 and Z_2 (bit-sliced)."
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+aes = "0.9.4"
+getrandom = "0.3"
+
+[dev-dependencies]
+proptest.workspace = true
+
+[features]
+# Planted bugs. Each one must make `cargo test` fail; scripts/check_planted.sh enforces that.
+plant-mul-wrong-share = []
+plant-no-rerandomize = []
+plant-lt-off-by-one = []
+plant-short-carry = []
+plant-unstable-sort = []
+plant-scan-ignores-segments = []
+# Planted cheating servers (malicious mode). Each must be detected.
+plant-cheat-mul = []
+plant-cheat-and = []
+plant-cheat-keep-own = []
+plant-cheat-triple = []
+plant-cheat-open-copy = []
+# Planted gap: the 4b shuffle check is skipped (a tampering shuffle must then go unnoticed by everything else).
+plant-skip-shuffle-check = []
+# Planted leak: open the permutation unshuffled (results correct; only the leakage audit can catch it).
+plant-open-unshuffled = []

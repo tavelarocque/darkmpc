@@ -1,0 +1,5 @@
+rtt 0->1: rtt min/avg/max/mdev = 41.860/41.926/42.753/0.190 ms
+rtt 1->2: rtt min/avg/max/mdev = 27.233/27.311/28.185/0.201 ms
+rtt 2->0: rtt min/avg/max/mdev = 68.439/68.510/69.219/0.163 ms
+[  5]   0.00-5.00   sec   444 MBytes   745 Mbits/sec    0             sender
+[  5]   0.00-5.04   sec   444 MBytes   739 Mbits/sec                  receiver

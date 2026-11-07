@@ -1,0 +1,17 @@
+[package]
+name = "darkmpc-reference"
+description = "Plain, non-cryptographic reference matcher that defines correct darkmpc fills."
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[features]
+# Planted bugs. Each one must make `cargo test` fail; scripts/check_planted.sh enforces that.
+plant-mes-boundary = []
+plant-skip-elimination = []
+plant-prefix-inclusive = []
+plant-stage2-no-surplus = []
+plant-stage2-time-before-price = []
+
+[dev-dependencies]
+proptest.workspace = true

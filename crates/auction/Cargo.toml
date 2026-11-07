@@ -1,0 +1,28 @@
+[package]
+name = "darkmpc-auction"
+description = "The dark pool auctions (Stage 1 and Stage 2) evaluated in three-party MPC."
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+darkmpc-mpc = { path = "../mpc" }
+darkmpc-reference.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+
+[features]
+# Planted bug: fills are returned in sorted order instead of being routed back.
+plant-skip-unsort = []
+# Planted gaps in input validation; malicious-client tests must catch each.
+plant-skip-consistency = []
+plant-skip-bit-check = []
+plant-skip-range-check = []
+plant-skip-order-check = []
+# Planted bugs in the Stage 2 MPC auction; the Stage 2 differential tests must catch each.
+plant-stage2-mpc-drop-flat-stretch = []
+plant-stage2-mpc-strict-sell = []
+plant-stage2-mpc-buy-time-only = []
+# Planted leak: a stray opening of the clearing prices (results correct; only the leakage audit can catch it).
+plant-stage2-debug-open = []

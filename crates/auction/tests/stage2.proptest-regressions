@@ -1,0 +1,11 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc bb03d79e961a02899d2a493e89b4d655c627468940bcac71c2fdc19032e8c844 # shrinks to o = [LimitOrder { symbol: 1, side: Buy, size: 6, limit: 95 }, LimitOrder { symbol: 1, side: Sell, size: 1, limit: 1 }], seed = 0
+cc 2849a5d5270713ac2870f4dd81c1dcc4117aeff13bb399bfd5de5fc32f95fe49 # shrinks to o = [LimitOrder { symbol: 0, side: Buy, size: 2, limit: 101 }, LimitOrder { symbol: 0, side: Sell, size: 1, limit: 95 }], seed = 0
+cc 7eaf7ece5b72c1117ee2124f8a381f46a8855bb73d039522c9afb5842a7321a3 # shrinks to o = [LimitOrder { symbol: 1, side: Sell, size: 1, limit: 95 }, LimitOrder { symbol: 1, side: Buy, size: 2, limit: 96 }], seed = 0
+cc c9987fe7fa942d2d1460c5f2f6e8be2028f0f595f17a215149cb3e4f921fe8d6 # shrinks to o = [LimitOrder { symbol: 0, side: Buy, size: 5, limit: 96 }, LimitOrder { symbol: 0, side: Buy, size: 5, limit: 97 }, LimitOrder { symbol: 0, side: Buy, size: 6, limit: 97 }, LimitOrder { symbol: 0, side: Sell, size: 1, limit: 95 }], seed = 0
+cc 99ee69b12ea1b36da163d6b2fe9e0fcdc460ba42c3d28b342841977ef2165616 # shrinks to o = [LimitOrder { symbol: 2, side: Sell, size: 1, limit: 95 }, LimitOrder { symbol: 2, side: Buy, size: 1, limit: 95 }, LimitOrder { symbol: 2, side: Buy, size: 1, limit: 96 }], seed = 0

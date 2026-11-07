@@ -1,0 +1,8 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 5a0430725093ee34794cc090d003a529a86b43c06bfd5c1f1861a9ee2976bd3c # shrinks to o = [LimitOrder { symbol: 2, side: Sell, size: 1, limit: 95 }, LimitOrder { symbol: 2, side: Buy, size: 1, limit: 96 }, LimitOrder { symbol: 2, side: Buy, size: 1, limit: 95 }]
+cc 38c538af12c22caf10b2286b79274312a4c1414a37b0ec50756c8e0591eacff4 # shrinks to o = [LimitOrder { symbol: 1, side: Sell, size: 1, limit: 95 }, LimitOrder { symbol: 0, side: Buy, size: 2, limit: 100 }, LimitOrder { symbol: 0, side: Sell, size: 20, limit: 95 }, LimitOrder { symbol: 0, side: Buy, size: 19, limit: 101 }]
